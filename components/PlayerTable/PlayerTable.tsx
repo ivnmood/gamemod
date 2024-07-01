@@ -3,6 +3,7 @@ import { useDisclosure } from '@mantine/hooks';
 import { useState } from 'react';
 
 import { FriendRequestModal } from './components/FriendRequestModal';
+import { PlayerItem } from './components/PlayerItem';
 import styles from './PlayerTable.module.css';
 import { Player } from '@/types/api';
 
@@ -38,24 +39,11 @@ export const PlayerTable: React.FC<PlayerTableProps> = ({ title, players }) => {
             </Table.Thead>
             <Table.Tbody>
               {players.map((player) => (
-                <Tooltip
+                <PlayerItem
                   key={player.id}
-                  label={`Kills: ${player.kills}, Deaths: ${player.deaths}`}
-                  withArrow
-                >
-                  <Table.Tr>
-                    <Table.Td>{player.nickname}</Table.Td>
-                    <Table.Td>{player.score}</Table.Td>
-                    <Table.Td className={player.state === 'alive' ? styles.alive : styles.dead}>
-                      {player.state}
-                    </Table.Td>
-                    <Table.Td>
-                      <Button onClick={handleFriendRequest(player)} size="xs">
-                        Send Request
-                      </Button>
-                    </Table.Td>
-                  </Table.Tr>
-                </Tooltip>
+                  player={player}
+                  handleFriendRequest={handleFriendRequest}
+                />
               ))}
             </Table.Tbody>
           </Table>

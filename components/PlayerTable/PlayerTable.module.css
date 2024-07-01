@@ -1,5 +1,5 @@
 .tableContainer {
-    background-color: rgba(255, 255,255, 0.85);
+    background-color: rgba(255, 255, 255, 0.85);
 }
 
 .alive {
@@ -8,9 +8,4 @@
 
 .dead {
     color: #e53e3e;
-}
-
-.title {
-    text-align: center;
-    margin-bottom: 1rem;
 }
