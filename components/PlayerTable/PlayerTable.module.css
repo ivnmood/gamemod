@@ -1,0 +1,16 @@
+.tableContainer {
+    background-color: rgba(255, 255,255, 0.85);
+}
+
+.alive {
+    color: #38a169;
+}
+
+.dead {
+    color: #e53e3e;
+}
+
+.title {
+    text-align: center;
+    margin-bottom: 1rem;
+}

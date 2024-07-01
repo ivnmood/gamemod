@@ -1,0 +1,22 @@
+.body {
+    max-height: 100vh;
+    position: relative;
+}
+
+.image {
+    /* to rewrite native img styles */
+    position: fixed !important;
+    z-index: -1;
+}
+
+.container {
+    padding: 20px;
+}
+
+.loader {
+    width: 100%;
+    font-size: 25vw;
+    opacity: 0.7;
+    text-align: center;
+}
+
