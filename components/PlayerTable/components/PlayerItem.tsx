@@ -1,6 +1,6 @@
 import { Button, Table, Tooltip } from '@mantine/core';
 
-import styles from './PlayerTable.module.css';
+import styles from '../PlayerTable.module.css';
 import { Player } from '@/types/api';
 
 interface Props {
